@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+</head>
+<body>
+	<h1 th:text="${titulo}"></h1>
+	<ul>
+		<li>
+		<a th:href="@{/params/string(texto='SU MADRESITA')}">/params/string?texto=SU MADRESITA</a>
+		</li>
+		<li>
+		<a th:href="@{/params/string(texto='SU MADRESITA 2')}">/params/string?texto=SU MADRESITA 2</a>
+		</li>
+		<li>
+		<a th:href="@{/params/mix-params(texto='SU MADRESITA 2',numero=5)}">/params/string?texto=SU MADRESITA 3</a>
+		</li>
+		<li>
+		<a th:href="@{/params/mix-params-request(texto='SU MADRESITA 2',numero=5)}">/params/string?texto=SU MADRESITA 4</a>
+		</li>
+	</ul>
+</body>
+</html>
